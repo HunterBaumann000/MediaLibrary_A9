@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "j2GFnRX98ffIRmMLBwdbs9w8jVpuH0AMcn7rHqRYTVOyvUxE/OwKWyiCzXFgU/FZpoAKg4CPLTHk+NoaZjvknQ==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MovieLibrary_A5.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Owner\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
