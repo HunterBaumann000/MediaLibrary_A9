@@ -34,8 +34,8 @@ namespace MediaLibrary_A9
             for (int i = 0; i < allMedia.Count; i++)
             {
                 var media = allMedia.Where(m => (m.Show.showGenres
-                || m.Movie.movieGenres
-                || m.Video.videoGenres).Contains(genreInput));
+                || m.Movie.movieGenres           //case insensitive
+                || m.Video.videoGenres).Contains(StringComparer.CurrentCultureIgnoreCase.Equals(genreInput)));
                 userMediaQuery.Add(media);
             }
 
@@ -50,8 +50,8 @@ namespace MediaLibrary_A9
             for (int i = 0; i < allMedia.Count; i++)
             {
                 var media = allMedia.Where(m => (m.Show.showTitle
-                || m.Movie.movieTitle
-                || m.Video.videoTitle).Contains(titleInput));
+                || m.Movie.movieTitle           //case insensitive
+                || m.Video.videoTitle).Contains(StringComparer.CurrentCultureIgnoreCase.Equals(titleInput)));
 
                 userMediaQuery.Add(media);
             } 
