@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using MovieLibrary_A9.MediaType;
 
 namespace MediaLibrary_A9.MediaType
-{ 
+{  
     public abstract class Media
     {
         //shared by all objects

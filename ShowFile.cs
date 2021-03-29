@@ -30,7 +30,7 @@ namespace MovieLibrary_A9
                     filePath = "shows.csv";
                     StreamWriter sw = new StreamWriter(filePath, true);
                 }
-            }
+            } 
             try
             {
                 // iterate through each show obj until theres no more greater, then add one to ID

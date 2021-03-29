@@ -6,7 +6,7 @@ using MediaLibrary_A9;
 
 namespace MovieLibrary_A9
 {
-    class Program
+    class Program 
     {
         static void Main(string[] args)
         {

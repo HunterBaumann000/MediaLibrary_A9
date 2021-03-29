@@ -7,7 +7,7 @@ using MovieLibrary_A9.MediaType;
 namespace MovieLibrary_A9
 {
     public class MovieFile
-    {
+    { 
         public string filePath { get; set; }
         public List<Movie> Movies { get; set; }
         

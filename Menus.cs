@@ -180,7 +180,7 @@ namespace MovieLibrary_A9
             // check if the title matches another title
             if (!videoFile.hasSameTitle(video.title)){
                        
-                do
+                do 
                 {
                     // ask user to enter region
                     System.Console.WriteLine("Enter a Region (type '.' to stop) ");

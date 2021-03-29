@@ -49,10 +49,10 @@ namespace MediaLibrary_A9
             {
                 var media = allMedia.Where(m => (m.Show.showTitle || m.Movie.movieTitle || m.Video.videoTitle).Contains(titleInput));
                 userMediaQuery.Add(media);
-            }
+            } 
 
             return userMediaQuery;
-        }
+        } 
 
 
 
