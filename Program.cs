@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using MovieLibrary_A9.MediaType;
 using MediaLibrary_A9;
+using MediaLibrary_A9.MediaType;
 
 namespace MovieLibrary_A9
 {
@@ -10,18 +11,13 @@ namespace MovieLibrary_A9
     {
         static void Main(string[] args)
         {
-            //setting up file directories
-            string movieFilePath = "movies.csv";
-            string showFilePath = "shows.csv";
-            string videoFilePath = "video.csv";
-
             //class with file-path parameter
-            MovieFile movieFile = new MovieFile(movieFilePath);
-            ShowFile showFile = new ShowFile(showFilePath);
-            VideoFile videoFile = new VideoFile(videoFilePath);
+            MovieFile movieFile = new MovieFile("movies.csv");
+            ShowFile showFile = new ShowFile("shows.csv");
+            VideoFile videoFile = new VideoFile("video.csv");
 
             //menu class
-            var menu = new Menus(IMenus);
+            var menu = new Menus();
 
             //declaring userInput so the scanner menu input works
             string userInput = "";
@@ -110,7 +106,7 @@ namespace MovieLibrary_A9
                         for (int i = 0; i < list.Count; i++)
                         {
                             Media m = (Media)list[i];
-                            Console.WriteLine(m.displayMediaFormatted());
+                            Console.WriteLine(m.Display());
                         }
                     } 
                     else if (userInput == "2") 
@@ -121,7 +117,7 @@ namespace MovieLibrary_A9
                         for (int i = 0; i < list.Count; i++)
                         {
                             Media m = (Media)list[i];
-                            Console.WriteLine(m.displayMediaFormatted());
+                            Console.WriteLine(m.Display());
                         }
                     }
 

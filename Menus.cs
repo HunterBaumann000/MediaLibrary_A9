@@ -5,14 +5,8 @@ using MovieLibrary_A9.MediaType;
 
 namespace MovieLibrary_A9
 {
-    public class Menus : IMenus
+    public class Menus
     {
-        private IMenus menus;
-
-        public Menus(IMenus menus)
-        {
-            this.menus = menus;
-        }
 
         public List<Movie> Movies 
         { 
