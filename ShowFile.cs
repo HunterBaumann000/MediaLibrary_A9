@@ -84,6 +84,10 @@ namespace MovieLibrary_A9
             }
         }
 
+        public ShowFile()
+        {
+        }
+
         public bool hasSameTitle(string showTitle)
         {
             //convert all show objects to lowercase, and if that instance contains the title, return true

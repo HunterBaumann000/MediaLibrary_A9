@@ -84,6 +84,11 @@ namespace MovieLibrary_A9
                 Console.WriteLine(e.Message);
             }
         }
+
+        public MovieFile()
+        {
+        }
+
         public bool hasSameTitle(string movieTitle)
         {
             //convert all movie objects to lowercase, and if that instance contains the title, return true

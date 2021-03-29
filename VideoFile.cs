@@ -84,7 +84,11 @@ namespace MovieLibrary_A9
                 Console.WriteLine(e.Message);
             }
         }
-        
+
+        public VideoFile()
+        {
+        }
+
         public bool hasSameTitle(string videoTitle)
         {
             //convert all video objects to lowercase, and if that instance contains the title, return true
