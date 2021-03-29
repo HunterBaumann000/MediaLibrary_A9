@@ -6,28 +6,18 @@ using Newtonsoft.Json;
 
 namespace MediaLibrary_A9
 {
-    public class Repository : IRepository
+public class Repository : IRepository
     {
-
-        public List<Movie> Movies { 
-            get => throw new System.NotImplementedException(); 
-            set => throw new System.NotImplementedException(); 
-            }
-        public List<Show> Shows { 
-            get => throw new System.NotImplementedException(); 
-            set => throw new System.NotImplementedException(); 
-            }
-        public List<Video> Videos { 
-            get => throw new System.NotImplementedException(); 
-            set => throw new System.NotImplementedException(); 
-            } 
+        List<Movie> IRepository.Movies { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        List<Show> IRepository.Shows { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        List<Video> IRepository.Videos { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
         public void AddMovie(Movie movie)
         {
             Movie movie1 = new Movie();
-            movie1.movieId = Movies.Max(s => s.movieId) + 1;
-            movie1.movieTitle = this.movieTitle;
-            movie1.movieGenres = this.genreList;
+            movie1.mediaId = IRepository.Movies.Max(s => s.mediaId) + 1;
+            movie1.title = movie.title;
+            movie1.genres = movie.genres;
 
             string json = JsonConvert.SerializeObject(movie1);
 
@@ -36,11 +26,12 @@ namespace MediaLibrary_A9
 
         public void AddShow(Show show)
         {
-            Movie show1 = new Movie();
-            show1.showId = Shows.Max(s => s.showId) + 1;
-            show1.showSeason = this.showSeason;
-            show1.showEpisode = this.showEpisode;
-            show1.showWriters = this.showWriters;
+            Show show1 = new Show();
+            show.mediaId = IRepository.Shows.Max(s => s.mediaId) + 1;
+            show.showSeason = show.showSeason;
+            show.title = show.title;
+            show.showEpisode = show.showEpisode;
+            show.showWriters = show.showWriters;
 
             string json = JsonConvert.SerializeObject(show1);
             
@@ -49,12 +40,12 @@ namespace MediaLibrary_A9
 
         public void AddVideo(Video video)
         {
-            Movie video1 = new Movie();
-            video1.videoId = Video.Max(s => s.videoId) + 1;
-            video1.videoTitle = this.videoTitle;
-            video1.videoFormat = this.videoFormat;
-            video1.videoLength = this.videoLength;
-            video1.videoRegions = this.videoRegions;
+            Video video1 = new Video();
+            video1.mediaId = IRepository.Videos.Max(s => s.mediaId) + 1;
+            video1.title = video.title;
+            video1.videoFormat = video.videoFormat;
+            video1.videoLength = video.videoLength;
+            video1.videoRegions = video.videoRegions;
 
             string json = JsonConvert.SerializeObject(video1);
 
