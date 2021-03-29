@@ -15,7 +15,7 @@ namespace MediaLibrary_A9
         public static List<object> userMediaQuery = new List<object>();
 
         public static void GetAllMedia() {
-            //reading all data from csv files
+            //reads all data from csv files
             ShowFile s = new ShowFile("shows.csv");
             MovieFile m = new MovieFile("movies.csv");
             VideoFile v = new VideoFile("videos.csv");
@@ -23,7 +23,7 @@ namespace MediaLibrary_A9
             //adding all obj lists into one list
             allMedia.Add(m.Movies);
             allMedia.Add(s.Shows);
-            allMedia.Add(v.Videos);
+            allMedia.Add(v.Videos); 
         }
 
         public static object SearchMediaByGenre(string genreInput) {
@@ -33,7 +33,9 @@ namespace MediaLibrary_A9
 
             for (int i = 0; i < allMedia.Count; i++)
             {
-                var media = allMedia.Where(m => (m.Show.showGenres || m.Movie.movieGenres || m.Video.videoGenres).Contains(genreInput));
+                var media = allMedia.Where(m => (m.Show.showGenres
+                || m.Movie.movieGenres
+                || m.Video.videoGenres).Contains(genreInput));
                 userMediaQuery.Add(media);
             }
 
@@ -47,17 +49,13 @@ namespace MediaLibrary_A9
             
             for (int i = 0; i < allMedia.Count; i++)
             {
-                var media = allMedia.Where(m => (m.Show.showTitle || m.Movie.movieTitle || m.Video.videoTitle).Contains(titleInput));
+                var media = allMedia.Where(m => (m.Show.showTitle
+                || m.Movie.movieTitle
+                || m.Video.videoTitle).Contains(titleInput));
+
                 userMediaQuery.Add(media);
             } 
-
             return userMediaQuery;
         } 
-
-
-
     }
-
-
-
 }
