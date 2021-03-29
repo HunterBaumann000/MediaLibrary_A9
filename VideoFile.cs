@@ -39,7 +39,7 @@ namespace MovieLibrary_A9
                 sw.WriteLine(video.Display());
                 sw.Close();
                 
-                // add video details to Lists
+                //add video details to Lists
                 Videos.Add(video);
             } 
             catch(Exception e)
