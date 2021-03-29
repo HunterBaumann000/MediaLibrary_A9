@@ -182,7 +182,7 @@ namespace MovieLibrary_A9
                        
                 do 
                 {
-                    // ask user to enter region
+                    //ask user to enter region
                     System.Console.WriteLine("Enter a Region (type '.' to stop) ");
                     tempInput = System.Console.ReadLine();
 
@@ -190,7 +190,7 @@ namespace MovieLibrary_A9
                             
                 } while (tempInput != ".");
 
-                //reset loop 
+                //reset the loop
                 tempInput = "";  
 
                 do
