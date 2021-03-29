@@ -13,7 +13,7 @@ namespace MovieLibrary_A9
         public static object Video { get; internal set; }
 
         public void AddVideo(Video video)
-        {
+        { 
             try
             {
                 if (!File.Exists("videos.csv"))
