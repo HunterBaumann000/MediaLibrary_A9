@@ -1,18 +1,21 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
-using MovieLibrary_A9;
+using MediaLibrary_A9;
 using System.Linq;
+using MediaLibrary_A9.MediaType;
 
 namespace MediaLibrary_A9
 {
     
-    public class SearchMedia
+    public class SearchMedia : MediaType.Media
     {      
 
         //new list of objects to hold all object types
         public static List<object> allMedia = new List<object>();
         public static List<object> userMediaQuery = new List<object>();
+
+        static Media media = new SearchMedia();
 
         public static void GetAllMedia() {
             //reads all data from csv files
@@ -33,10 +36,11 @@ namespace MediaLibrary_A9
 
             for (int i = 0; i < allMedia.Count; i++)
             {
-                var media = allMedia.Where(m => (m.Show.showGenres
-                || m.Movie.movieGenres           //case insensitive 
-                || m.Video.videoGenres).Contains(StringComparer.CurrentCultureIgnoreCase.Equals(genreInput)));
-                userMediaQuery.Add(media);
+                var result = from m in allMedia
+                    where media.genres.Contains(genreInput) 
+                    select m;           
+                
+                userMediaQuery.Add(result);
             }
 
             return userMediaQuery;
@@ -49,11 +53,11 @@ namespace MediaLibrary_A9
             
             for (int i = 0; i < allMedia.Count; i++)
             {
-                var media = allMedia.Where(m => (m.Show.showTitle
-                || m.Movie.movieTitle           //case insensitive 
-                || m.Video.videoTitle).Contains(StringComparer.CurrentCultureIgnoreCase.Equals(titleInput)));
+                var result = from m in allMedia
+                    where media.title.Contains(titleInput) 
+                    select m;   
 
-                userMediaQuery.Add(media);
+                userMediaQuery.Add(result);
             } 
             return userMediaQuery;
         } 

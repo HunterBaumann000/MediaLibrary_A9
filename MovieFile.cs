@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using MovieLibrary_A9.MediaType;
+using MediaLibrary_A9.MediaType;
 
-namespace MovieLibrary_A9
+namespace MediaLibrary_A9
 {
     public class MovieFile
     { 
