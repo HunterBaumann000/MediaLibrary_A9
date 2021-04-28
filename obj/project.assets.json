@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MovieLibrary_A5.csproj",
-      "projectName": "MovieLibrary_A5",
-      "projectPath": "c:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MovieLibrary_A5.csproj",
+      "projectUniqueName": "C:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MediaLibrary_A9.csproj",
+      "projectName": "MediaLibrary_A9",
+      "projectPath": "C:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MediaLibrary_A9.csproj",
       "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\obj\\",
+      "outputPath": "C:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -108,7 +108,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
