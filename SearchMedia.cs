@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using MediaLibrary_A9.MediaType;
 
 namespace MediaLibrary_A9
 {
@@ -7,8 +8,8 @@ namespace MediaLibrary_A9
     {
         public static Repository repo = new Repository();
 
-        public static object SearchMediaByGenre(string genreInput) {
-            List<object> userMediaQuery = new List<object>();
+        public static List<Media> SearchMediaByGenre(string genreInput) {
+            List<Media> userMediaQuery = new List<Media>();
 
             for (int i = 0; i < repo.DeserializeMedia().Count; i++)
             {
@@ -16,14 +17,14 @@ namespace MediaLibrary_A9
                     where (m.genres).Contains(genreInput) 
                     select m;           
                 
-                userMediaQuery.Add(result);
+                userMediaQuery.Add((Media)result);
             }
             return userMediaQuery;
         }
 
-        public static object SearchMediaByTitle(string titleInput) {
+        public static List<Media> SearchMediaByTitle(string titleInput) {
             
-            List<object> userMediaQuery = new List<object>();
+            List<Media> userMediaQuery = new List<Media>();
             repo.DeserializeMedia();
             
             for (int i = 0; i < repo.DeserializeMedia().Count; i++)
@@ -32,7 +33,7 @@ namespace MediaLibrary_A9
                     where (m.title).Contains(titleInput) 
                     select m;   
 
-                userMediaQuery.Add(result);
+                userMediaQuery.Add((Media)result);
             } 
             return userMediaQuery;
         } 

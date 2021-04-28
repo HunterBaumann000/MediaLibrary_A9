@@ -4,7 +4,7 @@ using MediaLibrary_A9.MediaType;
 
 namespace MediaLibrary_A9.Interfaces
 {
-    public class MediaContext : IRepository, ILibrary
+    public class MediaContext : SearchMedia, IRepository, ILibrary
     {
         public static List<Movie> movieList = new List<Movie>();
         public static List<Show> showList = new List<Show>();

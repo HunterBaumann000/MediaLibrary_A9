@@ -67,6 +67,10 @@ namespace MovieLibrary_A7_1
                             break;
                     }
                 }
+                else if (userInput == "3")
+                {
+                    menu.userMediaQuery();
+                }
             } while (userInput != ".");
 
             Console.WriteLine("Program Ended");

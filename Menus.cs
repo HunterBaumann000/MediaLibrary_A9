@@ -7,14 +7,13 @@ namespace MediaLibrary_A9
 {
     public class Menus : MediaContext
     {
-        Repository repo = new Repository();
-
         public void DisplayMainMenu() {
             System.Console.WriteLine(" ");
             System.Console.WriteLine("What would you like to do?");
             System.Console.WriteLine("   1.) Add a Media.");
             System.Console.WriteLine("   2.) Display a list of media.");
-            System.Console.WriteLine("   3.) End Program ('.') ");
+            System.Console.WriteLine("   3.) Query for media.");
+            System.Console.WriteLine("   4.) End Program ('.') ");
             System.Console.Write("Choice: ");
         }
 
@@ -31,6 +30,42 @@ namespace MediaLibrary_A9
             System.Console.WriteLine("   2.) The Show File. ");
             System.Console.WriteLine("   3.) The Video File. ");
         }
+
+        public void userMediaQuery() {
+
+            string tempInput = "";
+
+            // ask user to input movie title
+            System.Console.WriteLine("Do you want to search by ");
+            System.Console.WriteLine("1.) Title ");
+            System.Console.WriteLine("2.) Genre ");
+            tempInput = System.Console.ReadLine();
+
+            if (tempInput == "1") 
+            {
+                System.Console.WriteLine("Enter Title Name");
+                tempInput = System.Console.ReadLine();
+
+                foreach(Media m in SearchMediaByTitle(tempInput))
+                {
+                    System.Console.WriteLine(m.Display());
+                }
+            } 
+            else if (tempInput == "2") 
+            {
+                System.Console.WriteLine("Enter Genre Name");
+                tempInput = System.Console.ReadLine();
+
+                foreach(Media m in SearchMediaByGenre(tempInput))
+                {
+                    System.Console.WriteLine(m.Display());
+                }
+            } 
+            else 
+            {
+              System.Console.WriteLine("that input was invalid");  
+            }
+        }   
 
         public void AskUserForMovie() {
             List<string> tempGenres = new List<string>();
