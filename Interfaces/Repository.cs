@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.Json;
 using MediaLibrary_A9.Interfaces;
 using MediaLibrary_A9.MediaType;
@@ -11,18 +13,19 @@ namespace MediaLibrary_A9
 {
     public class Repository : MediaContext
     {
+        
         public void SerializeMovie(Movie movie)
         {
-            //string json = JsonConvert.SerializeObject(GetAllMovies(), Formatting.Indented);
-
             foreach(Movie m in GetAllMovies()){
+
                 m.mediaId = GetAllMovies().Max(s => s.mediaId) + 1;
                 m.title = movie.title;
                 m.genres = movie.genres;
 
-                string jsonString = System.Text.Json.JsonSerializer.Serialize(movie);
-                File.WriteAllText("FileOutputs/movies.json", jsonString);
-                File.WriteAllText("FileOutputs/media.json", jsonString);
+                string json = JsonConvert.SerializeObject(movie, Formatting.Indented);    
+
+                File.AppendAllTextAsync("FileOutputs/movies.json", json);
+                File.AppendAllTextAsync("FileOutputs/media.json", json);
             }
            //var json = System.Text.Json.JsonSerializer.Serialize(GetAllMovies());
 
@@ -45,9 +48,10 @@ namespace MediaLibrary_A9
                 s.showEpisode = show.showEpisode;
                 s.showWriters = show.showWriters;
 
-                string jsonString = System.Text.Json.JsonSerializer.Serialize(show);
-                File.WriteAllText("FileOutputs/shows.json", jsonString);
-                File.WriteAllText("FileOutputs/media.json", jsonString);
+                string json = JsonConvert.SerializeObject(show, Formatting.Indented);   
+
+                File.AppendAllTextAsync("FileOutputs/shows.json", json);
+                File.AppendAllTextAsync("FileOutputs/media.json", json);
             }
 
 
@@ -74,9 +78,10 @@ namespace MediaLibrary_A9
                 v.videoLength = video.videoLength;
                 v.videoRegions = video.videoRegions;
 
-                string jsonString = System.Text.Json.JsonSerializer.Serialize(video);
-                File.WriteAllText("FileOutputs/videos.json", jsonString);
-                File.WriteAllText("FileOutputs/media.json", jsonString);
+                string json = JsonConvert.SerializeObject(video, Formatting.Indented);  
+
+                File.AppendAllTextAsync("FileOutputs/videos.json", json);
+                File.AppendAllTextAsync("FileOutputs/media.json", json);
             }
 
 

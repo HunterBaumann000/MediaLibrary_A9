@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MediaLibrary_A9.csproj": {}
+    "C:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MediaLibrary_A9.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MediaLibrary_A9.csproj": {
+    "C:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MediaLibrary_A9.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MediaLibrary_A9.csproj",
+        "projectUniqueName": "C:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MediaLibrary_A9.csproj",
         "projectName": "MediaLibrary_A9",
-        "projectPath": "c:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MediaLibrary_A9.csproj",
+        "projectPath": "C:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\MediaLibrary_A9.csproj",
         "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\obj\\",
+        "outputPath": "C:\\Users\\Owner\\Desktop\\MediaLibrary_A9\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,1 +1,16 @@
-{"mediaId":1,"title":"s","genres":null}
+{
+  "mediaId": 1,
+  "title": "HxH",
+  "genres": null
+}{
+  "mediaId": 1,
+  "title": "Godzilla",
+  "genres": null
+}{
+  "videoFormat": ".mov",
+  "videoLength": 10,
+  "videoRegions": null,
+  "mediaId": 1,
+  "title": "Cat",
+  "genres": null
+}
