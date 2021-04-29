@@ -46,6 +46,8 @@ namespace MediaLibrary_A9
                 System.Console.WriteLine("Enter Title Name");
                 tempInput = System.Console.ReadLine();
 
+                System.Console.WriteLine("number of results: " + SearchMediaByTitle(tempInput).Count);
+
                 foreach(Media m in SearchMediaByTitle(tempInput))
                 {
                     System.Console.WriteLine(m.Display());
@@ -55,6 +57,8 @@ namespace MediaLibrary_A9
             {
                 System.Console.WriteLine("Enter Genre Name");
                 tempInput = System.Console.ReadLine();
+
+                System.Console.WriteLine("number of results: " + SearchMediaByGenre(tempInput).Count);
 
                 foreach(Media m in SearchMediaByGenre(tempInput))
                 {
